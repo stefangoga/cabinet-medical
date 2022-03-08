@@ -1,5 +1,6 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire"
+  :style="{'background-image':'url(https://previews.123rf.com/images/demonova/demonova1805/demonova180500016/100482996-medical-pattern-for-wallpaper.jpg)'}">
     <v-content>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>

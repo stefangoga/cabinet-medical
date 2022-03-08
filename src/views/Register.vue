@@ -1,5 +1,7 @@
 <template>
-  <v-app id="register">
+  <v-app id="register"
+  :style="{'background-image':'url(https://previews.123rf.com/images/demonova/demonova1805/demonova180500016/100482996-medical-pattern-for-wallpaper.jpg)'}"
+  >
     <v-content>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
@@ -12,12 +14,29 @@
                 <v-form>
                   <v-text-field
                     prepend-icon="mdi-account"
+                    name="name"
+                    label="Nume"
+                    id="name"
+                    type="text"
+                    v-model="name"
+                  ></v-text-field>
+                  <v-text-field
+                    prepend-icon="mdi-account"
+                    name="firstname"
+                    label="Prenume"
+                    id="firstname"
+                    type="text"
+                    v-model="surname"
+                  ></v-text-field>
+                  <v-text-field
+                    prepend-icon="mdi-at"
                     name="login"
                     label="Email"
                     id="email"
                     type="email"
                     v-model="email"
                   ></v-text-field>
+                  
                   <v-text-field
                     id="password"
                     prepend-icon="mdi-lock"
@@ -26,6 +45,12 @@
                     type="password"
                     v-model="password"
                   ></v-text-field>
+                   <v-select
+                   :items="items"
+                   prepend-icon="mdi-medical-bag"
+          
+          label="Selectati specialitatea"
+        ></v-select>
                 </v-form>
               </v-card-text>
               <v-card-actions>
@@ -42,12 +67,14 @@
 
 <script>
 import firebase from "firebase";
+
 export default {
   name: "register",
   data: function () {
     return {
       email: "",
-      password: ""
+      password: "",
+       items: ['Dermatologie', 'Pediatrie', 'Ginecologie', 'Diabet-boli de nutritie'],
     };
   },
   methods: {
@@ -70,5 +97,6 @@ export default {
       e.preventDefault();
     }
   }
+
 };
 </script>
