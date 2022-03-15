@@ -8,10 +8,18 @@
       label="Cautare"
     ></v-text-field>
     <p>Ati cautat clinica: {{ search }}</p>
-    <div class="pa-5" v-for="post in filteredPosts" :key="post.id">
+  <v-container class="my-5">
+  <v-layout row wrap>
+    <v-flex xs12 sm6 md4 lg3 v-for="post in filteredPosts" :key="post.id">
+    
       <post :post="post"></post>
       
-    </div>
+    
+    </v-flex>
+  </v-layout>
+</v-container>
+
+    
   </div>
 </template>
 
@@ -30,37 +38,43 @@ export default {
           id: 1,
           title: "Clinica Max",
           body: "Dermatologie",
-          img: "https://vitaplusmedical.ro/wp-content/uploads/2019/02/Centrul-Medical-Parc-2.jpg"
+          img: "https://vitaplusmedical.ro/wp-content/uploads/2019/02/Centrul-Medical-Parc-2.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 2,
           title: "Clinica Anedio",
           body: "Pediatrie",
-          img: "https://mercut.ro/wp-content/uploads/2018/10/clinica-216x300.jpg"
+          img: "https://mercut.ro/wp-content/uploads/2018/10/clinica-216x300.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 3,
           title: "Clinica Dr.Brown",
           body: "Ginecologie",
-          img: "https://vitaplusmedical.ro/wp-content/uploads/photo-gallery/imported_from_media_libray/Policlinica-Independenta-aprilie-2020-R-fara-cabluri-960x720-1_(1).jpg"
+          img: "https://vitaplusmedical.ro/wp-content/uploads/photo-gallery/imported_from_media_libray/Policlinica-Independenta-aprilie-2020-R-fara-cabluri-960x720-1_(1).jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 4,
           title: "Clinica M&M",
           body: "Diabet-boli de nutritie",
-          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJTb9QBYiEh9tUKTmoXi0o7X4eQTwJSB-KUfEzDL8Sq1KRCro_2neD_z8QBTboG3K8YJs&usqp=CAU"
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJTb9QBYiEh9tUKTmoXi0o7X4eQTwJSB-KUfEzDL8Sq1KRCro_2neD_z8QBTboG3K8YJs&usqp=CAU",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 5,
           title: "Clinica Tommed",
           body: "Reumatologie",
-          img: "http://www.centrulmedicaltommed.ro/images/header_banner1.jpg"
+          img: "http://www.centrulmedicaltommed.ro/images/header_banner1.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 6,
           title: "Clinica PriMed",
           body: "Dermatologie",
-          img: "data:image/jpeg;base64,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"
+          img: "https://calatoriaperfecta.ro/wp-content/uploads/2020/07/Clinica-PriMed.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         }
       ],
       
@@ -73,11 +87,7 @@ export default {
           post.title.toLowerCase().includes(this.search.toLowerCase()) ||
           post.body.toLowerCase().includes(this.search.toLowerCase())
       );
-      
     },
-    
-    
-    
   }
 };
 </script>
