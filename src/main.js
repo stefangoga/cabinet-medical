@@ -12,9 +12,18 @@ const firebaseConfig = {
   messagingSenderId: "320566362395",
   appId: "1:320566362395:web:58664383469d23442793be"
 };
+
+
 firebase.initializeApp(firebaseConfig);
 new Vue({
   router,
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+
+
+const db = firebase.firestore();
+
+db.settings({timestampsInSnapshots:true})
+
+export default db;

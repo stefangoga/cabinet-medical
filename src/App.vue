@@ -35,10 +35,37 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app>
+    <v-app-bar
+    app
+      
+      color="#43a047"
+      dark
+      prominent
+      src="https://static01.nyt.com/images/2017/02/16/well/doctors-hospital-design/doctors-hospital-design-superJumbo.jpg"
+    >
+      <template v-slot:img="{ props }">
+        <v-img
+          v-bind="props"
+        ></v-img>
+      </template>
+
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Programari cabinete medicale</v-toolbar-title>
+      <v-app-bar-title >Programari cabinete medicale</v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -49,6 +76,7 @@
 
 <script>
   export default {
+    
     data: () => ({ drawer: null ,
     items: [
           { title: 'Pagina principala', icon: 'mdi-home' , to:'/'},

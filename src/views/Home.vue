@@ -75,6 +75,20 @@ export default {
           body: "Dermatologie",
           img: "https://calatoriaperfecta.ro/wp-content/uploads/2020/07/Clinica-PriMed.jpg",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
+        },
+        {
+          id: 7,
+          title: "Clinica Sante",
+          body: "Pediatrie",
+          img: "https://www.clinica-sante.ro/wp-content/uploads/2012/11/giurgiului.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
+        },
+        {
+          id: 8,
+          title: "Clinica Dentist Popescu",
+          body: "Dentara",
+          img: "https://ziarulsanatatea.ro/wp-content/uploads/2018/05/clinica6-1024x576.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         }
       ],
       
