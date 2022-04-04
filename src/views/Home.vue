@@ -7,7 +7,7 @@
       dense
       label="Cautare"
     ></v-text-field>
-    <p>Ati cautat clinica: {{ search }}</p>
+    <p class="font-weight-bold">Ati cautat clinica: {{ search }}</p>
   <v-container class="my-5">
   <v-layout row wrap>
     <v-flex xs12 sm6 md4 lg3 v-for="post in filteredPosts" :key="post.id">
@@ -24,6 +24,8 @@
 </template>
 
 <script>
+// import db from "@/main";
+
 import Post from "@/components/Post";
 export default {
   name: "Home",
@@ -32,6 +34,7 @@ export default {
   },
   data() {
     return {
+      ora:"",
       search: "",
       posts: [
         {

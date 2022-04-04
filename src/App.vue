@@ -2,6 +2,7 @@
   <v-app id="inspire">
      <v-navigation-drawer 
      v-model="drawer"
+     
      app>
       <v-list-item>
         <v-list-item-content>
@@ -77,7 +78,7 @@
 <script>
   export default {
     
-    data: () => ({ drawer: null ,
+    data: () => ({ drawer: false ,
     items: [
           { title: 'Pagina principala', icon: 'mdi-home' , to:'/'},
           { title: 'Autentificare', icon: 'mdi-login', to:'/login' },
