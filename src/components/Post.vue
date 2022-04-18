@@ -139,12 +139,20 @@
                   v-model="bifare"
                   label="Bifati aceasta casuta daca dispuneti de trimitere de la medicul de familie"
                 ></v-checkbox>
-                <v-file-input
+                <!-- <v-file-input
+                type="file"
+                @change="previewImage"
                   v-model="trimitere"
                   :disabled="!bifare"
                   label="Atasati trimiterea"
                   truncate-length="1"
-                ></v-file-input>
+                ></v-file-input> -->
+                <input :disabled="!bifare" type="file" accept="image/*" @change="previewImage" name="" id="">
+                <p>Progres: {{uploadValue.toFixed()+"%"}}
+                 <progress :value="uploadValue" max="100"></progress>
+                </p>
+                <img :src="picture" alt="">
+                <v-btn color="blue" @click="onUpload">Incarcare trimitere</v-btn>
                 <v-text-field
                   v-model="Nume"
                   :counter="10"
@@ -203,13 +211,16 @@
 
 <script>
 import db from "@/main";
-
+import firebase from 'firebase';
 import Home from "@/views/Home";
 export default {
   Home,
   props: ["post"],
   data: () => ({
     loading: false,
+    imageData:null,
+    picture:null,
+    uploadValue:0,
     selection: 1,
     dialog: false,
     bifare: false,
@@ -231,6 +242,28 @@ export default {
   }),
 
   methods: {
+    previewImage(event){
+      this.uploadValue=0;
+      this.picture=null,
+      this.imageData=event.target.files[0];
+    },
+    onUpload(){
+      this.picture=null;
+      const storageRef=firebase.storage().ref(`${this.imageData.name}`).put(this.imageData);
+      storageRef.on(`state_changed`,snapshot=>{
+        this.uploadValue=(snapshot.bytesTransferred/snapshot.totalBytes)*100;
+      }, error=> {console.log(error.message)},
+      ()=>{this.uploadValue=100;
+      storageRef.snapshot.ref.getDownloadURL().then((url)=>{
+        this.picture=url;
+      })
+      }
+      );
+    },
+
+
+
+
     // reserve() {
     //   this.loading = true;
 
@@ -243,6 +276,19 @@ export default {
       //  },4000)
 
       if (this.$refs.form.validate()) {
+
+
+
+
+
+
+
+
+
+
+
+
+
         this.loading = true;
         const project = {
           nume: this.Nume,

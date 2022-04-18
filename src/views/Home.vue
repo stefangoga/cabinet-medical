@@ -92,6 +92,13 @@ export default {
           body: "Dentara",
           img: "https://ziarulsanatatea.ro/wp-content/uploads/2018/05/clinica6-1024x576.jpg",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
+        },
+        {
+          id: 9,
+          title: "Policlinica Elga",
+          body: "Urologie",
+          img: "https://ghidautoservice.ro/wp-content/uploads/2022/03/POLICLINICA-ELGA.jpg",
+          ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         }
       ],
       
