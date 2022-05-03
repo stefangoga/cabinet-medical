@@ -85,7 +85,11 @@ export default {
         "Dermatologie",
         "Pediatrie",
         "Ginecologie",
-        "Diabet-boli de nutritie"
+        "Diabet-boli de nutritie",
+        "Stomatologie",
+        "Reumatologie",
+        "Dentara",
+        "Urologie"
       ]
     };
   },

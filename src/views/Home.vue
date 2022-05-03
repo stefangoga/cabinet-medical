@@ -41,21 +41,21 @@ export default {
           id: 1,
           title: "Clinica Max",
           body: "Dermatologie",
-          img: "https://vitaplusmedical.ro/wp-content/uploads/2019/02/Centrul-Medical-Parc-2.jpg",
+          img: "https://scontent.ftsr1-1.fna.fbcdn.net/v/t39.30808-6/272941993_2083037795182586_4407166944928682889_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=CxetX8ABOCsAX_nkQpD&_nc_ht=scontent.ftsr1-1.fna&oh=00_AT-O5CKwwm9g7glGYXPLrI-Vh1oujpQSV_UtjrDzyVYbNg&oe=627495D7",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 2,
           title: "Clinica Anedio",
           body: "Pediatrie",
-          img: "https://mercut.ro/wp-content/uploads/2018/10/clinica-216x300.jpg",
+          img: "http://clinicaanedio.ro/files/galerie/2_dscn7728.jpg",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {
           id: 3,
-          title: "Clinica Dr.Brown",
-          body: "Ginecologie",
-          img: "https://vitaplusmedical.ro/wp-content/uploads/photo-gallery/imported_from_media_libray/Policlinica-Independenta-aprilie-2020-R-fara-cabluri-960x720-1_(1).jpg",
+          title: "Clinica Dr.Neagoe",
+          body: "Stomatologie",
+          img: "https://www.dentistonline.ro/images/users_cabinete/1961/Foto2.jpg",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM"
         },
         {

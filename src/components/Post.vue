@@ -85,6 +85,9 @@
             <v-btn color="primary" dark v-bind="attrs" v-on="on" class="mb-4">
               Programare
             </v-btn>
+            <v-btn color="green" dark  class="mx-4" to="details">
+              Detalii
+            </v-btn>
           </template>
           <v-card>
             <v-toolbar dark color="primary">
@@ -173,6 +176,18 @@
                   label="E-mail"
                   required
                 ></v-text-field>
+                <v-text-field
+                  v-model="cnp"
+                  type="number"
+                  label="C.N.P"
+                  required
+                  placeholder="Introduceti codul numeric personal format din 13 cifre"
+                ></v-text-field>
+                <v-text-field
+            label="Descrieti-ne afectiunea dumneavoastra"
+            single-line
+            v-model="afectiune"
+          ></v-text-field>
 
                 <div>Specialitatea: {{ post.body }}</div>
 
@@ -297,7 +312,9 @@ export default {
           specialitatea: this.post.body,
           nume_clinica: this.post.title,
           ora_programare: this.selectionhours,
-          ziua_programarii: this.selectionday
+          ziua_programarii: this.selectionday,
+          cnp:this.cnp,
+          afectiune:this.afectiune
         };
         db.collection("programari")
           .add(project)
