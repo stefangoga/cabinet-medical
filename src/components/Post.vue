@@ -85,9 +85,9 @@
             <v-btn color="primary" dark v-bind="attrs" v-on="on" class="mb-4">
               Programare
             </v-btn>
-            <v-btn color="green" dark  class="mx-4" to="details">
+            <!-- <v-btn color="green" dark  class="mx-4" to="details">
               Detalii
-            </v-btn>
+            </v-btn> -->
           </template>
           <v-card>
             <v-toolbar dark color="primary">
@@ -220,8 +220,50 @@
           </v-card>
         </v-dialog>
       </v-row>
+      <v-dialog
+        transition="dialog-bottom-transition"
+        max-width="900"
+        
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+          class="ma-2"
+          dark
+            color="green"
+            v-bind="attrs"
+            v-on="on"
+          >Detalii</v-btn>
+        </template>
+                <template v-slot:default="dialog">
+          <v-card>
+            <v-toolbar
+              color="primary"
+              dark
+            >Detalii {{ post.title }}</v-toolbar>
+            <v-card-text>
+              <div class=" pa-12">{{post.about}}</div>
+              <div>Pentru mai multe detalii va invitam sa vizitati site-ul nostru {{post.link}}</div>
+              <v-img
+                    
+                    max-height="20000"
+                    max-width="300"
+                    :src="post.alt"
+                  ></v-img>
+                  
+            </v-card-text>
+            <v-card-actions class="justify-end">
+              <v-btn
+                text
+                @click="dialog.value = false"
+              >Inchide fereastra</v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+
+        </v-dialog>
     </v-card>
   </div>
+  
 </template>
 
 <script>
