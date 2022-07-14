@@ -83,6 +83,7 @@
           { title: 'Pagina principala', icon: 'mdi-home' , to:'/'},
           { title: 'Autentificare', icon: 'mdi-login', to:'/login' },
           { title: 'Inregistrare', icon: 'mdi-account-plus',to:'/register' },
+          { title: 'Blog', icon: 'mdi-android-messages',to:'/blog' },
           { title: 'Despre', icon: 'mdi-lightbulb',to:'/about' }
         ],}),
   }

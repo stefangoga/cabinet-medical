@@ -46,7 +46,7 @@ export default {
           id: 2,
           title: "Clinica Anedio",
           body: "Pediatrie",
-          img: "http://clinicaanedio.ro/files/galerie/2_dscn7728.jpg",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLACl7LmWOgC5WoEoNRbh3xOyG9mHY-PgO6A&usqp=CAU",
           ora1: "5:30PM", ora2: "7:30PM", ora3: "8:00PM", ora4: "9:00PM",
           about:"In cadrul ANEDIO Medical Center va asteptam cu o gama diversificata de alte servicii medicale prin punerea la dispoziție a unor spatii de consultatii medicale si tratament utilate la cel mai inal nivel, in conformitate cu prevederile Ministerului Sanatatii si deservite de un corp medical cu o bogata experienta profesionala si rezultate recunoscute",
           link:"http://clinicaanedio.ro/",

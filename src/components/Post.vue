@@ -24,7 +24,7 @@
             size="14"
           ></v-rating>
 
-          <div class="grey--text ms-4">4.5 (413)</div>
+          <div class="grey--text ms-4">4.5 (12)</div>
         </v-row>
 
         <div class="my-4 text-subtitle-1">
@@ -333,18 +333,6 @@ export default {
       //  },4000)
 
       if (this.$refs.form.validate()) {
-
-
-
-
-
-
-
-
-
-
-
-
 
         this.loading = true;
         const project = {
