@@ -89,7 +89,8 @@ export default {
           about:"	Suntem o policlinica tanara cu sediul în Craiova, Bulevardul Carol I nr.50, jud. Dolj, functionand inca din luna ianuarie 2006.Ne-am propus sa oferim servicii medicale complexe si de calitate atat in medicina primara cat si in ambulatoriul de specialitate.Serviciile noastre se adreseaza atat persoanelor fizice cat şi celor juridice, acestora din urma oferindu-le servicii complete de medicina muncii. ",
           link:"http://www.policlinicatommed.ro/",
           alt:"http://www.centrulmedicaltommed.ro/images/DocPac1.jpg",
-          value:4.2
+          value:4.2,
+          adresa:"Bulevardul Carol I 50, Craiova 200692"
         },
         {
           id: 6,
